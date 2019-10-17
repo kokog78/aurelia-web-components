@@ -3,7 +3,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_pal_1 = require("aurelia-pal");
 function configure(config) {
     config.globalResources([
-        aurelia_pal_1.PLATFORM.moduleName('./elements/hello-world')
+        aurelia_pal_1.PLATFORM.moduleName('./elements/close-button'),
+        aurelia_pal_1.PLATFORM.moduleName('./elements/closeable'),
+        aurelia_pal_1.PLATFORM.moduleName('./elements/collapsible')
     ]);
 }
 exports.configure = configure;
