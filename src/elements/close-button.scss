@@ -1,0 +1,19 @@
+close-button {
+  display: inline-block;
+  position: absolute;
+  right: 5px;
+
+  .close {
+    color: #777;
+    font: 14px/100% arial, sans-serif;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.8;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:after {
+    content: '✖';
+  }
+}

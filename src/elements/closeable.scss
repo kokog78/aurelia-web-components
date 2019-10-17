@@ -1,0 +1,21 @@
+closeable {
+
+  .panel-content {
+    position: relative;
+    display: flex;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .panel-content.closed {
+    display: none;
+  }
+
+  .panel-body {
+    margin-top: 18px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+}

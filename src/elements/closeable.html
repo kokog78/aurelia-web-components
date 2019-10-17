@@ -1,0 +1,11 @@
+<template>
+  <require from="./close-button"></require>
+  <require from="./closeable.css"></require>
+
+  <div class="panel-content" class.bind="open ? 'open' : 'closed'">
+    <close-button callback.call="closePanel()"></close-button>
+    <div class="panel-body">
+      <slot></slot>
+    </div>
+  </div>
+</template>

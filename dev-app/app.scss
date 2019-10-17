@@ -1,0 +1,27 @@
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+
+
+  .web-components-test-section {
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid green;
+    position: relative;
+    h2 {
+      margin: 0 0 10px 0;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: green;
+      color: yellow;
+    }
+
+    closeable {
+      .panel-content {
+        max-height: 100px;
+      }
+    }
+
+  }
+}
