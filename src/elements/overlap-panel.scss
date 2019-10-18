@@ -1,0 +1,22 @@
+overlap-panel {
+
+  > .overlap-panel-content {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    grid-template-rows: 1fr;
+    place-content: stretch stretch;
+
+    > .overlap-panel-main {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+      z-index: 100;
+      margin-top: 5px;
+    }
+
+    > .overlap-panel-dialog {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      z-index: 200;
+    }
+  }
+}

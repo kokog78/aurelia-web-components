@@ -1,6 +1,6 @@
 closeable-panel {
 
-  .panel-content {
+  > .panel-content {
     display: grid;
     grid-template-columns: auto 20px;
     grid-template-rows: 20px 1fr;
@@ -11,24 +11,29 @@ closeable-panel {
     place-content: stretch stretch;
     margin-top: 5px;
     border-radius: 5px;
+    padding: 0 4px 4px 4px;
 
-    .panel-header {
+    > .panel-header {
       grid-area: header;
+      padding-top: 5px;
+      padding-left: 5px;
     }
 
-    close-button {
+    > close-button {
       grid-area: close;
       justify-self: center;
+      padding-top: 2px;
     }
 
-    .panel-body {
+    > .panel-body {
       overflow-x: hidden;
       overflow-y: auto;
       grid-area: body;
+      padding: 3px;
     }
   }
 
-  .panel-content.closed {
+  > .panel-content.closed {
     display: none;
   }
 
