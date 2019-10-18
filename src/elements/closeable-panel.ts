@@ -1,6 +1,6 @@
 import {computedFrom, bindable} from 'aurelia-framework';
 
-export class Closeable {
+export class CloseablePanel {
 
   @bindable
   open: boolean;

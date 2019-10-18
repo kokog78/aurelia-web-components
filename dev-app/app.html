@@ -1,26 +1,26 @@
 <template>
   <require from="./app.css"></require>
-  <require from="./elements/collapsible"></require>
-  <require from="./elements/closeable"></require>
+  <require from="./elements/collapsible-panel"></require>
+  <require from="./elements/closeable-panel"></require>
   <require from="./elements/close-button"></require>
 
   <div class="web-components-test-section">
     <h2>Collapsible</h2>
     <input id="collapsible-result" value.bind="collapsibleResult">
 
-    <collapsible caption="Test Collapse" callback.call="collapsibleCallback(open, 1)">
+    <collapsible-panel caption="Test Collapse" callback.call="collapsibleCallback(open, 1)">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </collapsible>
-    <collapsible callback.call="collapsibleCallback(open, 2)">
+    </collapsible-panel>
+    <collapsible-panel callback.call="collapsibleCallback(open, 2)">
       <span slot="header">
         Test Collapse With Header
       </span>
       Lorem ipsum dolor sit amet, <b>consectetur adipiscing elit</b>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </collapsible>
+    </collapsible-panel>
 
-    <collapsible caption="Collapsible 1" group="accordion">Test 1</collapsible>
-    <collapsible caption="Collapsible 2" group="accordion">Test 2</collapsible>
-    <collapsible caption="Collapsible 3" group="accordion">Test 3</collapsible>
+    <collapsible-panel caption="Collapsible 1" group="accordion">Test 1</collapsible-panel>
+    <collapsible-panel caption="Collapsible 2" group="accordion">Test 2</collapsible-panel>
+    <collapsible-panel caption="Collapsible 3" group="accordion">Test 3</collapsible-panel>
   </div>
 
   <div class="web-components-test-section">
@@ -33,13 +33,13 @@
     <h2>Closeable Panel</h2>
     <input id="panel-result" value.bind="panelResult">
     <button click.trigger="panelOpen = true">Show</button>
-    <closeable open.two-way="panelOpen" callback.call="closeablePanelCallback()" caption="Test panel">
+    <closeable-panel open.two-way="panelOpen" callback.call="closeablePanelCallback()" caption="Test panel">
       Lorem ipsum dolor sit amet, <b>consectetur adipiscing elit</b>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </closeable>
-    <closeable>
+    </closeable-panel>
+    <closeable-panel>
       <span slot="header"><b>Test panel</b></span>
       Should be displayed.
-    </closeable>
+    </closeable-panel>
   </div>
 
 </template>

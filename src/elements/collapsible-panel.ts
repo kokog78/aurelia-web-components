@@ -1,6 +1,6 @@
 import {bindable} from 'aurelia-framework';
 
-export class Collapsible {
+export class CollapsiblePanel {
 
   @bindable
   caption: string;
