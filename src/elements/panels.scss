@@ -8,6 +8,9 @@
   background-color: $panel-header-background-color;
   color: $panel-header-color;
 }
+.panel-overlay-colors {
+  background-color: $panel-overlay-background-color;
+}
 .panel-borders {
   border: 1px solid $panel-header-background-color;
 }

@@ -7,6 +7,7 @@
     <div class="overlap-panel-main">
       <slot></slot>
     </div>
+    <div class="overlap-panel-overlay panel-overlay-colors" if.bind="open"></div>
     <div class="overlap-panel-dialog">
       <closeable-panel open.two-way="open" caption="${caption}">
         <slot name="dialog" slot="body"></slot>
