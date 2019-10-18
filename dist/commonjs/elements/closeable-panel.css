@@ -1,0 +1,21 @@
+closeable-panel .panel-content {
+  display: grid;
+  grid-template-columns: auto 20px;
+  grid-template-rows: 20px 1fr;
+  grid-template-areas: "header close" "body body";
+  grid-gap: 5px 5px;
+  place-content: stretch stretch;
+  margin-top: 5px;
+  border-radius: 5px; }
+  closeable-panel .panel-content .panel-header {
+    grid-area: header; }
+  closeable-panel .panel-content close-button {
+    grid-area: close;
+    justify-self: center; }
+  closeable-panel .panel-content .panel-body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    grid-area: body; }
+
+closeable-panel .panel-content.closed {
+  display: none; }
