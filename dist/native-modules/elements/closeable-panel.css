@@ -1,4 +1,4 @@
-closeable-panel > .panel-content {
+closeable-panel > .closeable-panel-content {
   display: grid;
   grid-template-columns: auto 20px;
   grid-template-rows: 20px 1fr;
@@ -8,19 +8,19 @@ closeable-panel > .panel-content {
   margin-top: 5px;
   border-radius: 5px;
   padding: 0 4px 4px 4px; }
-  closeable-panel > .panel-content > .panel-header {
+  closeable-panel > .closeable-panel-content > .closeable-panel-header {
     grid-area: header;
     padding-top: 5px;
     padding-left: 5px; }
-  closeable-panel > .panel-content > close-button {
+  closeable-panel > .closeable-panel-content > close-button {
     grid-area: close;
     justify-self: center;
     padding-top: 2px; }
-  closeable-panel > .panel-content > .panel-body {
+  closeable-panel > .closeable-panel-content > .closeable-panel-body {
     overflow-x: hidden;
     overflow-y: auto;
     grid-area: body;
     padding: 3px; }
 
-closeable-panel > .panel-content.closed {
+closeable-panel > .closeable-panel-content.closed {
   display: none; }

@@ -2,11 +2,11 @@
   <require from="./collapsible-panel.css"></require>
 
   <div class.bind="open ? 'open' : 'closed'" id="${id}">
-    <div class="collapsible-caption" click.trigger="onClick()">
+    <div class="collapsible-panel-caption" click.trigger="onClick()">
       <span if.bind="caption">${caption}</span>
       <slot name="header"></slot>
     </div>
-    <div class="collapsible-body">
+    <div class="collapsible-panel-body">
       <slot></slot>
     </div>
   </div>
