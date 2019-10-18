@@ -1,22 +1,35 @@
 closeable {
 
   .panel-content {
-    position: relative;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 20px;
+    grid-template-rows: 20px 1fr;
+    grid-template-areas:
+      "header close"
+      "body body";
+    grid-gap: 5px 5px;
+    place-content: stretch stretch;
     margin-top: 5px;
-    padding: 5px;
     border-radius: 5px;
+
+    .panel-header {
+      grid-area: header;
+    }
+
+    close-button {
+      grid-area: close;
+      justify-self: center;
+    }
+
+    .panel-body {
+      overflow-x: hidden;
+      overflow-y: auto;
+      grid-area: body;
+    }
   }
 
   .panel-content.closed {
     display: none;
-  }
-
-  .panel-body {
-    margin-top: 18px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    flex: 1 1 auto;
   }
 
 }

@@ -6,6 +6,9 @@ export class Closeable {
   open: boolean;
 
   @bindable
+  caption: string;
+
+  @bindable
   callback: Function;
 
   attached() {
