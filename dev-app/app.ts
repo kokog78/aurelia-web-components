@@ -1,4 +1,4 @@
-import {MasterDetailItem} from "../src/elements/master-detail-panel";
+import {MasterDetailItem, MasterDetailManager} from "../src/elements/master-detail-panel";
 
 export class App {
 
@@ -9,6 +9,9 @@ export class App {
   overlapOpen: boolean;
   masterDetailResult: string;
   masterDetailItem: MasterDetailItem;
+  masterDetailManager: MasterDetailManager = {
+    setSelectedItem: (item) => this.selectDetail(item)
+  };
   masterDetailItems: MasterDetailItem[] = [
     {
       caption: 'One',
@@ -43,12 +46,15 @@ export class App {
   }
 
   selectDetail(item: MasterDetailItem) {
-    this.masterDetailResult = `selected: ${item['data']}`;
     this.masterDetailItem = item;
+    if (item) {
+      this.masterDetailResult = `selected: ${item['data']}`;
+    } else {
+      this.masterDetailResult = `no selection`;
+    }
   }
 
-  backToMaster(item: MasterDetailItem) {
-    this.masterDetailResult = `unselected: ${item['data']}`;
-    this.masterDetailItem = null;
+  clearMasterDetailSelection() {
+    this.masterDetailManager.select(null);
   }
 }

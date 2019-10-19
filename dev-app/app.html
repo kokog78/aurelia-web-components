@@ -60,9 +60,9 @@
     <div class="web-components-test-section">
       <h2>Master-Detail Panel</h2>
       <input id="master-detail-result" value.bind="masterDetailResult">
+      <button id="master-detail-clear" click.trigger="clearMasterDetailSelection()">Clear</button>
       <master-detail-panel items.bind="masterDetailItems"
-                           select-callback.call="selectDetail(item)"
-                           back-callback.call="backToMaster(item)">
+                           manager.two-way="masterDetailManager">
         <div slot="header">
           <div if.bind="!masterDetailItem">
             <input type="text" placeholder="File name">

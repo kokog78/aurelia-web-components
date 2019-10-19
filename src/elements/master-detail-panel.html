@@ -5,12 +5,12 @@
 
   <div class="ib-master-detail-panel-content">
     <div class="ib-master-detail-panel-header">
-      <div class="ib-master-detail-panel-back ib-back-button-colors" if.bind="selected" click.trigger="back()"></div>
+      <div class="ib-master-detail-panel-back ib-back-button-colors" if.bind="selectedItem" click.trigger="back()"></div>
       <div class="ib-master-detail-panel-header-custom">
         <slot name="header"></slot>
       </div>
     </div>
-    <div class="ib-master-detail-panel-items" if.bind="!selected">
+    <div class="ib-master-detail-panel-items" if.bind="!selectedItem">
       <template repeat.for="item of items">
         <div class="ib-master-detail-panel-item" >
           <a href="" click.trigger="select(item)" if.bind="item.caption">${item.caption}</a>
@@ -21,7 +21,7 @@
         <div class="ib-master-detail-panel-next ib-next-button-colors" click.trigger="select(item)"></div>
       </template>
     </div>
-    <div class="ib-master-detail-panel-detail" show.bind="selected">
+    <div class="ib-master-detail-panel-detail" show.bind="selectedItem">
       <slot></slot>
     </div>
   </div>

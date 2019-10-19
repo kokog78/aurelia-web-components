@@ -7,6 +7,11 @@ export interface MasterDetailItem {
   [key: string]: any;
 }
 
+export interface MasterDetailManager {
+  setSelectedItem?: (item: MasterDetailItem) => void;
+  select?: (item: MasterDetailItem) => void;
+}
+
 export class MasterDetailPanel {
 
   @bindable
@@ -16,27 +21,24 @@ export class MasterDetailPanel {
   items: MasterDetailItem[];
 
   @bindable
+  manager: MasterDetailManager;
+
   selectedItem: MasterDetailItem;
 
-  @bindable
-  selectCallback: Function;
-
-  @bindable
-  backCallback: Function;
-
-  @computedFrom('selectedItem')
-  get selected(): boolean {
-    return this.selectedItem != null;
+  attached() {
+    if (this.manager) {
+      this.manager.select = (item) => this.select(item);
+    }
   }
 
   select(item: MasterDetailItem) {
     this.selectedItem = item;
-    this.selectCallback && this.selectCallback({item: item});
+    this.manager && this.manager.setSelectedItem && this.manager.setSelectedItem(item);
   }
 
   back() {
     let item: MasterDetailItem = this.selectedItem;
     this.selectedItem = null;
-    this.backCallback && this.backCallback({item: item});
+    this.manager && this.manager.setSelectedItem && this.manager.setSelectedItem(null);
   }
 }
