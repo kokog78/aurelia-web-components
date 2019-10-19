@@ -1,6 +1,8 @@
 overlap-panel {
+  display: flex;
 
   > .ib-overlap-panel-content {
+    flex: 1 1 auto;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr;
@@ -11,6 +13,7 @@ overlap-panel {
       grid-row: 1 / 2;
       z-index: 100;
       margin-top: 5px;
+      padding: 5px;
     }
 
     > .ib-overlap-panel-overlay {
@@ -23,6 +26,9 @@ overlap-panel {
       grid-column: 2 / 3;
       grid-row: 1 / 2;
       z-index: 200;
+    }
+    > .ib-overlap-panel-dialog.ib-closed {
+      display: none;
     }
   }
 }

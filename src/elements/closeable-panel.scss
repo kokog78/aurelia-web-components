@@ -1,6 +1,8 @@
 closeable-panel {
+  display: flex;
 
   > .ib-closeable-panel-content {
+    flex: 1 1 auto;
     display: grid;
     grid-template-columns: auto 20px;
     grid-template-rows: 20px 1fr;
@@ -33,7 +35,7 @@ closeable-panel {
     }
   }
 
-  > .ib-closeable-panel-content.closed {
+  > .ib-closeable-panel-content.ib-closed {
     display: none;
   }
 

@@ -1,11 +1,10 @@
 collapsible-panel {
   display: flex;
   flex-direction: column;
-  padding: 5px;
 
   .ib-collapsible-panel-caption {
-    display: block;
     flex: 0 0 auto;
+    display: block;
     margin-bottom: 5px;
     cursor: pointer;
     transition: all 0.20s ease-out;
@@ -29,6 +28,7 @@ collapsible-panel {
   .ib-collapsible-panel-body {
     flex: 1 1 auto;
     display: none;
+    margin-bottom: 5px;
   }
 
   .ib-open {

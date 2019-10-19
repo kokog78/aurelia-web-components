@@ -1,26 +1,32 @@
-closeable-panel > .closeable-panel-content {
-  display: grid;
-  grid-template-columns: auto 20px;
-  grid-template-rows: 20px 1fr;
-  grid-template-areas: "header close" "body body";
-  grid-gap: 5px 5px;
-  place-content: stretch stretch;
-  margin-top: 5px;
-  border-radius: 5px;
-  padding: 0 4px 4px 4px; }
-  closeable-panel > .closeable-panel-content > .closeable-panel-header {
-    grid-area: header;
-    padding-top: 5px;
-    padding-left: 5px; }
-  closeable-panel > .closeable-panel-content > close-button {
-    grid-area: close;
-    justify-self: center;
-    padding-top: 2px; }
-  closeable-panel > .closeable-panel-content > .closeable-panel-body {
-    overflow-x: hidden;
-    overflow-y: auto;
-    grid-area: body;
-    padding: 3px; }
-
-closeable-panel > .closeable-panel-content.closed {
-  display: none; }
+closeable-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  closeable-panel > .ib-closeable-panel-content {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: auto 20px;
+    grid-template-rows: 20px 1fr;
+    grid-template-areas: "header close" "body body";
+    grid-gap: 5px 5px;
+    place-content: stretch stretch;
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 0 4px 4px 4px; }
+    closeable-panel > .ib-closeable-panel-content > .ib-closeable-panel-header {
+      grid-area: header;
+      padding-top: 5px;
+      padding-left: 5px; }
+    closeable-panel > .ib-closeable-panel-content > close-button {
+      grid-area: close;
+      justify-self: center;
+      padding-top: 2px; }
+    closeable-panel > .ib-closeable-panel-content > .ib-closeable-panel-body {
+      overflow-x: hidden;
+      overflow-y: auto;
+      grid-area: body;
+      padding: 3px; }
+  closeable-panel > .ib-closeable-panel-content.ib-closed {
+    display: none; }

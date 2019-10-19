@@ -1,13 +1,13 @@
-.panel-body-colors {
+.ib-panel-body-colors {
   background-color: white;
   color: black; }
 
-.panel-header-colors {
+.ib-panel-header-colors {
   background-color: #abb891;
   color: #034099; }
 
-.panel-overlay-colors {
-  background-color: white; }
+.ib-panel-overlay-colors {
+  background-color: rgba(200, 200, 200, 0.5); }
 
-.panel-borders {
+.ib-panel-borders {
   border: 1px solid #abb891; }

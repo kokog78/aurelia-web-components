@@ -5,18 +5,17 @@ collapsible-panel {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 5px; }
-  collapsible-panel .collapsible-panel-caption {
-    display: block;
+          flex-direction: column; }
+  collapsible-panel .ib-collapsible-panel-caption {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
+    display: block;
     margin-bottom: 5px;
     cursor: pointer;
     -webkit-transition: all 0.20s ease-out;
     transition: all 0.20s ease-out; }
-  collapsible-panel .collapsible-panel-caption::before {
+  collapsible-panel .ib-collapsible-panel-caption::before {
     content: ' ';
     display: inline-block;
     margin-top: 2px;
@@ -32,13 +31,14 @@ collapsible-panel {
     transition: -webkit-transform .2s ease-out;
     transition: transform .2s ease-out;
     transition: transform .2s ease-out, -webkit-transform .2s ease-out; }
-  collapsible-panel .collapsible-panel-body {
+  collapsible-panel .ib-collapsible-panel-body {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
-    display: none; }
-  collapsible-panel .open .collapsible-panel-caption::before {
+    display: none;
+    margin-bottom: 5px; }
+  collapsible-panel .ib-open .ib-collapsible-panel-caption::before {
     -webkit-transform: rotate(90deg) translateX(-3px);
             transform: rotate(90deg) translateX(-3px); }
-  collapsible-panel .open .collapsible-panel-body {
+  collapsible-panel .ib-open .ib-collapsible-panel-body {
     display: block; }

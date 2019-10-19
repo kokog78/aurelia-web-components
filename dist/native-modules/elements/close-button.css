@@ -1,11 +1,11 @@
 @charset "UTF-8";
 close-button {
   display: inline-block; }
-  close-button .close {
+  close-button .ib-close {
     font: 14px/100% arial, sans-serif;
     text-decoration: none;
     opacity: 0.8; }
-  close-button .close:hover {
+  close-button .ib-close:hover {
     opacity: 1; }
-  close-button .close:after {
+  close-button .ib-close:after {
     content: '✖'; }
