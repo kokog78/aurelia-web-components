@@ -10,15 +10,14 @@ closeable-panel {
     grid-template-columns: auto 20px;
     grid-template-rows: 20px 1fr;
     grid-template-areas: "header close" "body body";
-    grid-gap: 5px 5px;
+    grid-gap: 10px 5px;
     place-content: stretch stretch;
     margin-top: 5px;
     border-radius: 5px;
     padding: 0 4px 4px 4px; }
     closeable-panel > .ib-closeable-panel-content > .ib-closeable-panel-header {
       grid-area: header;
-      padding-top: 5px;
-      padding-left: 5px; }
+      padding: 5px; }
     closeable-panel > .ib-closeable-panel-content > close-button {
       grid-area: close;
       justify-self: center;
@@ -27,6 +26,6 @@ closeable-panel {
       overflow-x: hidden;
       overflow-y: auto;
       grid-area: body;
-      padding: 3px; }
+      padding: 5px; }
   closeable-panel > .ib-closeable-panel-content.ib-closed {
     display: none; }

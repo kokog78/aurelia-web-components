@@ -56,5 +56,27 @@
         </div>
       </overlap-panel>
     </div>
+
+    <div class="web-components-test-section">
+      <h2>Master-Detail Panel</h2>
+      <input id="master-detail-result" value.bind="masterDetailResult">
+      <master-detail-panel items.bind="masterDetailItems"
+                           select-callback.call="selectDetail(index)"
+                           back-callback.call="backToMaster(index)">
+        <div slot="header">
+          <div if.bind="!masterDetailItem">
+            <input type="text" placeholder="File name">
+            <button>New file</button>
+          </div>
+          <div if.bind="masterDetailItem">
+            <button>Delete file</button>
+          </div>
+        </div>
+        <div>
+          <div>Caption: ${masterDetailItem.caption}</div>
+          <div>Data: ${masterDetailItem.data}</div>
+        </div>
+      </master-detail-panel>
+    </div>
   </div>
 </template>

@@ -4,6 +4,7 @@ export function configure(config) {
         PLATFORM.moduleName('./elements/close-button'),
         PLATFORM.moduleName('./elements/closeable-panel'),
         PLATFORM.moduleName('./elements/collapsible-panel'),
-        PLATFORM.moduleName('./elements/overlap-panel')
+        PLATFORM.moduleName('./elements/overlap-panel'),
+        PLATFORM.moduleName('./elements/master-detail-panel')
     ]);
 }
