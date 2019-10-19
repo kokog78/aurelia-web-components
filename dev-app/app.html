@@ -61,8 +61,8 @@
       <h2>Master-Detail Panel</h2>
       <input id="master-detail-result" value.bind="masterDetailResult">
       <master-detail-panel items.bind="masterDetailItems"
-                           select-callback.call="selectDetail(index)"
-                           back-callback.call="backToMaster(index)">
+                           select-callback.call="selectDetail(item)"
+                           back-callback.call="backToMaster(item)">
         <div slot="header">
           <div if.bind="!masterDetailItem">
             <input type="text" placeholder="File name">

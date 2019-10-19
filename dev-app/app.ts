@@ -42,13 +42,13 @@ export class App {
     this.overlapOpen = true;
   }
 
-  selectDetail(index: number) {
-    this.masterDetailResult = `selected: ${index}`;
-    this.masterDetailItem = this.masterDetailItems[index];
+  selectDetail(item: MasterDetailItem) {
+    this.masterDetailResult = `selected: ${item['data']}`;
+    this.masterDetailItem = item;
   }
 
-  backToMaster(index: number) {
-    this.masterDetailResult = `unselected: ${index}`;
+  backToMaster(item: MasterDetailItem) {
+    this.masterDetailResult = `unselected: ${item['data']}`;
     this.masterDetailItem = null;
   }
 }

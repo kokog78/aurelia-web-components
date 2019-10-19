@@ -13,12 +13,12 @@
     <div class="ib-master-detail-panel-items" if.bind="!selected">
       <template repeat.for="item of items">
         <div class="ib-master-detail-panel-item" >
-          <a href="" click.trigger="select(item, $index)" if.bind="item.caption">${item.caption}</a>
+          <a href="" click.trigger="select(item)" if.bind="item.caption">${item.caption}</a>
           <div>
             <div innerhtml.bind="item.html" if.bind="item.html"></div>
           </div>
         </div>
-        <div class="ib-master-detail-panel-next ib-next-button-colors" click.trigger="select(item, $index)"></div>
+        <div class="ib-master-detail-panel-next ib-next-button-colors" click.trigger="select(item)"></div>
       </template>
     </div>
     <div class="ib-master-detail-panel-detail" show.bind="selected">

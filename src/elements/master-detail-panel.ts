@@ -1,3 +1,4 @@
+import {computedFrom} from 'aurelia-framework';
 import {bindable} from "aurelia-templating";
 
 export interface MasterDetailItem {
@@ -15,7 +16,7 @@ export class MasterDetailPanel {
   items: MasterDetailItem[];
 
   @bindable
-  selectedIndex: number;
+  selectedItem: MasterDetailItem;
 
   @bindable
   selectCallback: Function;
@@ -23,25 +24,19 @@ export class MasterDetailPanel {
   @bindable
   backCallback: Function;
 
-  selectedItem: MasterDetailItem;
-  selected: boolean;
-
-  attached() {
-    this.selected = (this.selectedIndex !== undefined && this.selectedIndex >= 0);
+  @computedFrom('selectedItem')
+  get selected(): boolean {
+    return this.selectedItem != null;
   }
 
-  select(item: MasterDetailItem, index: number) {
-    this.selectedIndex = index;
+  select(item: MasterDetailItem) {
     this.selectedItem = item;
-    this.selected = true;
-    this.selectCallback && this.selectCallback({item: item, index: index});
+    this.selectCallback && this.selectCallback({item: item});
   }
 
   back() {
-    let index: number = this.selectedIndex;
-    this.selectedIndex = -1;
+    let item: MasterDetailItem = this.selectedItem;
     this.selectedItem = null;
-    this.selected = false;
-    this.backCallback && this.backCallback({index: index});
+    this.backCallback && this.backCallback({item: item});
   }
 }
