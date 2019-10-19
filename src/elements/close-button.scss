@@ -1,15 +1,15 @@
 close-button {
   display: inline-block;
 
-  .close {
+  .ib-close {
     font: 14px/100% arial, sans-serif;
     text-decoration: none;
     opacity: 0.8;
   }
-  .close:hover {
+  .ib-close:hover {
     opacity: 1;
   }
-  .close:after {
+  .ib-close:after {
     content: '✖';
   }
 }

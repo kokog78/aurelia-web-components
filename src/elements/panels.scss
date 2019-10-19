@@ -1,16 +1,16 @@
 @import 'foundation/colors';
 
-.panel-body-colors {
+.ib-panel-body-colors {
   background-color: $panel-body-background-color;
   color: $panel-body-color;
 }
-.panel-header-colors {
+.ib-panel-header-colors {
   background-color: $panel-header-background-color;
   color: $panel-header-color;
 }
-.panel-overlay-colors {
+.ib-panel-overlay-colors {
   background-color: $panel-overlay-background-color;
 }
-.panel-borders {
+.ib-panel-borders {
   border: 1px solid $panel-header-background-color;
 }

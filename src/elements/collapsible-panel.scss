@@ -3,14 +3,14 @@ collapsible-panel {
   flex-direction: column;
   padding: 5px;
 
-  .collapsible-panel-caption {
+  .ib-collapsible-panel-caption {
     display: block;
     flex: 0 0 auto;
     margin-bottom: 5px;
     cursor: pointer;
     transition: all 0.20s ease-out;
   }
-  .collapsible-panel-caption::before {
+  .ib-collapsible-panel-caption::before {
     content: ' ';
     display: inline-block;
     margin-top: 2px;
@@ -26,16 +26,16 @@ collapsible-panel {
 
     transition: transform .2s ease-out;
   }
-  .collapsible-panel-body {
+  .ib-collapsible-panel-body {
     flex: 1 1 auto;
     display: none;
   }
 
-  .open {
-    .collapsible-panel-caption::before {
+  .ib-open {
+    .ib-collapsible-panel-caption::before {
       transform: rotate(90deg) translateX(-3px);
     }
-    .collapsible-panel-body {
+    .ib-collapsible-panel-body {
       display: block;
     }
   }

@@ -1,6 +1,6 @@
 closeable-panel {
 
-  > .closeable-panel-content {
+  > .ib-closeable-panel-content {
     display: grid;
     grid-template-columns: auto 20px;
     grid-template-rows: 20px 1fr;
@@ -13,7 +13,7 @@ closeable-panel {
     border-radius: 5px;
     padding: 0 4px 4px 4px;
 
-    > .closeable-panel-header {
+    > .ib-closeable-panel-header {
       grid-area: header;
       padding-top: 5px;
       padding-left: 5px;
@@ -25,7 +25,7 @@ closeable-panel {
       padding-top: 2px;
     }
 
-    > .closeable-panel-body {
+    > .ib-closeable-panel-body {
       overflow-x: hidden;
       overflow-y: auto;
       grid-area: body;
@@ -33,7 +33,7 @@ closeable-panel {
     }
   }
 
-  > .closeable-panel-content.closed {
+  > .ib-closeable-panel-content.closed {
     display: none;
   }
 
