@@ -1,8 +1,11 @@
-$panel-body-background-color: white;
+$panel-body-background: white;
 $panel-body-color: black;
-$panel-header-background-color: #abb891;
-$panel-header-color: #034099;
-$panel-overlay-background-color: rgba(200,200,200,0.5);
+$panel-header-background: linear-gradient(60deg, #66bb6a, #43a047);
+$panel-header-color: white;
+$panel-overlay-background: rgba(200,200,200,0.5);
+$panel-shadow-color-1: rgba(76, 175, 80, 0.28);
+$panel-shadow-color-2: rgba(0, 0, 0, 0.12);
+$panel-shadow-color-3: rgba(76, 175, 80, 0.2);
 
-$close-button-color: #034099;
-$close-button-shadow-color: #fff2b7;
+$close-button-color: white;
+$close-button-shadow-color: #034099;

@@ -1,16 +1,18 @@
 @import 'foundation/colors';
 
 .ib-panel-body-colors {
-  background-color: $panel-body-background-color;
+  background: $panel-body-background;
   color: $panel-body-color;
 }
 .ib-panel-header-colors {
-  background-color: $panel-header-background-color;
+  background: $panel-header-background;
   color: $panel-header-color;
 }
 .ib-panel-overlay-colors {
-  background-color: $panel-overlay-background-color;
+  background: $panel-overlay-background;
 }
-.ib-panel-borders {
-  border: 1px solid $panel-header-background-color;
+.ib-panel-shadow {
+  box-shadow: 0 12px 20px -10px $panel-shadow-color-1,
+    0 4px 20px 0px $panel-shadow-color-2,
+    0 7px 8px -5px $panel-shadow-color-3;
 }

@@ -3,7 +3,7 @@
   <require from="./closeable-panel.css"></require>
   <require from="./panels.css"></require>
 
-  <div class="ib-closeable-panel-content ib-panel-header-colors ib-panel-borders" class.bind="open ? 'ib-open' : 'ib-closed'">
+  <div class="ib-closeable-panel-content ib-panel-header-colors ib-panel-shadow" class.bind="open ? 'ib-open' : 'ib-closed'">
     <div class="ib-closeable-panel-header">
       <span if.bind="caption">${caption}</span>
       <slot name="header"></slot>
