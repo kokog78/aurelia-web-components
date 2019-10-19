@@ -21,15 +21,21 @@ master-detail-panel {
       border-bottom: 12px solid transparent;
       border-right: 15px solid currentColor;
       vertical-align: middle;
+      max-height: 25px;
       margin-left: .2rem;
-      margin-right: 10px; }
+      margin-right: 10px;
+      margin-top: auto;
+      margin-bottom: auto; }
     master-detail-panel .ib-master-detail-panel-content .ib-master-detail-panel-next {
       cursor: pointer;
       border-top: 12px solid transparent;
       border-bottom: 12px solid transparent;
       border-left: 15px solid currentColor;
       vertical-align: middle;
-      margin-right: .2rem; }
+      max-height: 25px;
+      margin-right: .2rem;
+      margin-top: auto;
+      margin-bottom: auto; }
     master-detail-panel .ib-master-detail-panel-content .ib-master-detail-panel-header {
       -webkit-box-flex: 0;
           -ms-flex: 0 0 auto;
