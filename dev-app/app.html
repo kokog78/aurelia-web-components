@@ -60,16 +60,16 @@
     <div class="web-components-test-section">
       <h2>Master-Detail Panel</h2>
       <input id="master-detail-result" value.bind="masterDetailResult">
-      <button id="master-detail-clear" click.trigger="clearMasterDetailSelection()">Clear</button>
-      <master-detail-panel items.bind="masterDetailItems"
-                           manager.two-way="masterDetailManager">
+      <master-detail-panel caption="Test"
+                           items.two-way="masterDetailItems"
+                           callback.call="selectDetail(item)">
         <div slot="header">
           <div if.bind="!masterDetailItem">
-            <input type="text" placeholder="File name">
-            <button>New file</button>
+            <input type="text" placeholder="File name" value.bind="masterDetailItemName">
+            <button id="master-detail-add" click.trigger="addMasterDetailItem(masterDetailItemName)">New file</button>
           </div>
           <div if.bind="masterDetailItem">
-            <button>Delete file</button>
+            <button>Do something</button>
           </div>
         </div>
         <div>

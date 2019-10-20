@@ -4,22 +4,38 @@
   <require from="./panels.css"></require>
 
   <div class="ib-master-detail-panel-content">
-    <div class="ib-master-detail-panel-header">
-      <div class="ib-master-detail-panel-back ib-back-button-colors" if.bind="selectedItem" click.trigger="back()"></div>
+    <div class="ib-master-detail-panel-header ib-panel-header-colors ib-panel-shadow">
+      <div class="ib-master-detail-panel-back ib-back-button-colors"
+           if.bind="selectedItem"
+           click.trigger="select(null)"></div>
+      <div if.bind="caption" class="ib-master-detail-panel-header-caption">
+        ${caption}
+      </div>
+      <div if.bind="caption && selectedItem && selectedItem.caption" class="ib-master-detail-panel-header-caption">
+        -
+      </div>
+      <div if.bind="selectedItem && selectedItem.caption" class="ib-master-detail-panel-header-caption">
+        ${selectedItem.caption}
+      </div>
       <div class="ib-master-detail-panel-header-custom">
         <slot name="header"></slot>
       </div>
     </div>
     <div class="ib-master-detail-panel-items" if.bind="!selectedItem">
-      <template repeat.for="item of items">
-        <div class="ib-master-detail-panel-item" >
-          <a href="" click.trigger="select(item)" if.bind="item.caption">${item.caption}</a>
-          <div>
-            <div innerhtml.bind="item.html" if.bind="item.html"></div>
-          </div>
+      <div repeat.for="item of items" class="ib-master-detail-panel-item">
+        <a href="" class="ib-master-detail-panel-link" click.trigger="select(item)" if.bind="item.caption">
+          ${item.caption}
+        </a>
+        <div class="ib-master-detail-panel-custom">
+          <div innerhtml.bind="item.html" if.bind="item.html"></div>
+        </div>
+        <div class="ib-master-detail-panel-actions">
+          <button repeat.for="action of item.actions" class.bind="action.className" click.trigger="runAction(action)">
+            ${action.caption}
+          </button>
         </div>
         <div class="ib-master-detail-panel-next ib-next-button-colors" click.trigger="select(item)"></div>
-      </template>
+      </div>
     </div>
     <div class="ib-master-detail-panel-detail" show.bind="selectedItem">
       <slot></slot>

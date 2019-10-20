@@ -1,15 +1,17 @@
 import {computedFrom} from 'aurelia-framework';
 import {bindable} from "aurelia-templating";
 
+export interface MasterDetailAction {
+  className?: string;
+  caption?: string;
+  callback: Function;
+}
+
 export interface MasterDetailItem {
   caption?: string;
   html?: string;
+  actions?: MasterDetailAction[];
   [key: string]: any;
-}
-
-export interface MasterDetailManager {
-  setSelectedItem?: (item: MasterDetailItem) => void;
-  select?: (item: MasterDetailItem) => void;
 }
 
 export class MasterDetailPanel {
@@ -21,24 +23,16 @@ export class MasterDetailPanel {
   items: MasterDetailItem[];
 
   @bindable
-  manager: MasterDetailManager;
+  callback: Function;
 
   selectedItem: MasterDetailItem;
 
-  attached() {
-    if (this.manager) {
-      this.manager.select = (item) => this.select(item);
-    }
-  }
-
   select(item: MasterDetailItem) {
     this.selectedItem = item;
-    this.manager && this.manager.setSelectedItem && this.manager.setSelectedItem(item);
+    this.callback && this.callback({item});
   }
 
-  back() {
-    let item: MasterDetailItem = this.selectedItem;
-    this.selectedItem = null;
-    this.manager && this.manager.setSelectedItem && this.manager.setSelectedItem(null);
+  runAction(action: MasterDetailAction) {
+    action.callback && action.callback();
   }
 }

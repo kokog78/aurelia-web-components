@@ -13,20 +13,12 @@ var aurelia_templating_1 = require("aurelia-templating");
 var MasterDetailPanel = (function () {
     function MasterDetailPanel() {
     }
-    MasterDetailPanel.prototype.attached = function () {
-        var _this = this;
-        if (this.manager) {
-            this.manager.select = function (item) { return _this.select(item); };
-        }
-    };
     MasterDetailPanel.prototype.select = function (item) {
         this.selectedItem = item;
-        this.manager && this.manager.setSelectedItem && this.manager.setSelectedItem(item);
+        this.callback && this.callback({ item: item });
     };
-    MasterDetailPanel.prototype.back = function () {
-        var item = this.selectedItem;
-        this.selectedItem = null;
-        this.manager && this.manager.setSelectedItem && this.manager.setSelectedItem(null);
+    MasterDetailPanel.prototype.runAction = function (action) {
+        action.callback && action.callback();
     };
     __decorate([
         aurelia_templating_1.bindable,
@@ -38,8 +30,8 @@ var MasterDetailPanel = (function () {
     ], MasterDetailPanel.prototype, "items", void 0);
     __decorate([
         aurelia_templating_1.bindable,
-        __metadata("design:type", Object)
-    ], MasterDetailPanel.prototype, "manager", void 0);
+        __metadata("design:type", Function)
+    ], MasterDetailPanel.prototype, "callback", void 0);
     return MasterDetailPanel;
 }());
 exports.MasterDetailPanel = MasterDetailPanel;

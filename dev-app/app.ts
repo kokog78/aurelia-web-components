@@ -1,4 +1,4 @@
-import {MasterDetailItem, MasterDetailManager} from "../src/elements/master-detail-panel";
+import {MasterDetailItem} from "../src/elements/master-detail-panel";
 
 export class App {
 
@@ -9,25 +9,14 @@ export class App {
   overlapOpen: boolean;
   masterDetailResult: string;
   masterDetailItem: MasterDetailItem;
-  masterDetailManager: MasterDetailManager = {
-    setSelectedItem: (item) => this.selectDetail(item)
-  };
-  masterDetailItems: MasterDetailItem[] = [
-    {
-      caption: 'One',
-      html: '<button>1</button>',
-      data: 12
-    },
-    {
-      html: '<b>Two</b>',
-      data: 34
-    },
-    {
-      caption: 'Three',
-      html: '<button>3</button>',
-      data: 56
-    }
-  ];
+  masterDetailItemName: string;
+  masterDetailItems: MasterDetailItem[] = [];
+
+  attached() {
+    this.addMasterDetailItem('1.json');
+    this.addMasterDetailItem('2.json');
+    this.addMasterDetailItem('3.json');
+  }
 
   collapsibleCallback(open: boolean, index: number) {
     this.collapsibleResult = `Collapsible #${index}: ${open}`;
@@ -54,7 +43,23 @@ export class App {
     }
   }
 
-  clearMasterDetailSelection() {
-    this.masterDetailManager.select(null);
+  addMasterDetailItem(caption: string) {
+    let item: MasterDetailItem = {
+      caption: caption,
+      html: '<i>test test test</i>',
+      actions: [
+        {
+          caption: 'Delete',
+          className: 'red',
+          callback: () => this.deleteMasterDetailItem(item)
+        }
+      ],
+      data: this.masterDetailItems.length * 10
+    };
+    this.masterDetailItems.push(item);
+  }
+
+  private deleteMasterDetailItem(deletedItem: MasterDetailItem) {
+    this.masterDetailItems = this.masterDetailItems.filter(item => item != deletedItem);
   }
 }
