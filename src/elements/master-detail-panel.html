@@ -30,8 +30,9 @@
           <div innerhtml.bind="item.html" if.bind="item.html"></div>
         </div>
         <div class="ib-master-detail-panel-actions">
-          <button repeat.for="action of item.actions" class.bind="action.className" click.trigger="runAction(action)">
-            ${action.caption}
+          <button repeat.for="action of item.actions"
+                  class.bind="action.className"
+                  click.trigger="runAction(action)" innerhtml.bind="action.html || ''">
           </button>
         </div>
         <div class="ib-master-detail-panel-next ib-next-button-colors" click.trigger="select(item)"></div>

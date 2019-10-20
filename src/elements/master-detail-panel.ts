@@ -3,7 +3,7 @@ import {bindable} from "aurelia-templating";
 
 export interface MasterDetailAction {
   className?: string;
-  caption?: string;
+  html?: string;
   callback: Function;
 }
 
