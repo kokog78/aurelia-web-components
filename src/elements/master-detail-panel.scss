@@ -14,6 +14,8 @@ master-detail-panel {
       padding: 5px;
       margin-bottom: 5px;
       border-radius: 5px;
+      border-width: 1px;
+      border-style: solid;
 
       > .ib-master-detail-panel-back {
         cursor: pointer;
@@ -29,13 +31,15 @@ master-detail-panel {
       }
 
       > .ib-master-detail-panel-header-caption {
-        margin-top: 5px;
+        margin-top: auto;
+        margin-bottom: auto;
         margin-right: 10px;
       }
 
       > .ib-master-detail-panel-header-custom {
         flex: 1 1 auto;
-        margin-top: 5px;
+        margin-top: auto;
+        margin-bottom: auto;
       }
     }
     .ib-master-detail-panel-items {
@@ -50,15 +54,21 @@ master-detail-panel {
         > .ib-master-detail-panel-link {
           min-height: 25px;
           padding-right: 10px;
+          margin-top: auto;
+          margin-bottom: auto;
         }
 
         > .ib-master-detail-panel-custom {
           flex: 1 1 auto;
           padding-right: 10px;
+          margin-top: auto;
+          margin-bottom: auto;
         }
 
         > .ib-master-detail-panel-actions {
           padding-right: 10px;
+          margin-top: auto;
+          margin-bottom: auto;
         }
 
         .ib-master-detail-panel-next {
