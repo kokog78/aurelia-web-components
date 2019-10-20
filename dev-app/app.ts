@@ -1,4 +1,4 @@
-import {MasterDetailItem} from "../src/elements/master-detail-panel";
+import {IbItem} from "../src/models/ib-item";
 
 export class App {
 
@@ -8,9 +8,9 @@ export class App {
   panelOpen: boolean = true;
   overlapOpen: boolean;
   masterDetailResult: string;
-  masterDetailItem: MasterDetailItem;
+  masterDetailItem: IbItem;
   masterDetailItemName: string;
-  masterDetailItems: MasterDetailItem[] = [];
+  masterDetailItems: IbItem[] = [];
 
   attached() {
     this.addMasterDetailItem('1.json');
@@ -34,7 +34,7 @@ export class App {
     this.overlapOpen = true;
   }
 
-  selectDetail(item: MasterDetailItem) {
+  selectDetail(item: IbItem) {
     this.masterDetailItem = item;
     if (item) {
       this.masterDetailResult = `selected: ${item['data']}`;
@@ -44,7 +44,7 @@ export class App {
   }
 
   addMasterDetailItem(caption: string) {
-    let item: MasterDetailItem = {
+    let item: IbItem = {
       caption: caption,
       html: '<i>test test test</i>',
       actions: [
@@ -59,7 +59,7 @@ export class App {
     this.masterDetailItems.push(item);
   }
 
-  private deleteMasterDetailItem(deletedItem: MasterDetailItem) {
+  private deleteMasterDetailItem(deletedItem: IbItem) {
     this.masterDetailItems = this.masterDetailItems.filter(item => item != deletedItem);
   }
 }

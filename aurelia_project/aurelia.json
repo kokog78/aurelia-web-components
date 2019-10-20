@@ -7,7 +7,8 @@
     "elements": "../src/elements",
     "attributes": "../src/attributes",
     "valueConverters": "../src/value-converters",
-    "bindingBehaviors": "../src/binding-behaviors"
+    "bindingBehaviors": "../src/binding-behaviors",
+    "models": "../src/models"
   },
   "transpiler": {
     "id": "typescript",

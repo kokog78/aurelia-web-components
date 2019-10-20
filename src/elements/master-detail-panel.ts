@@ -1,18 +1,7 @@
 import {computedFrom} from 'aurelia-framework';
 import {bindable} from "aurelia-templating";
-
-export interface MasterDetailAction {
-  className?: string;
-  html?: string;
-  callback: Function;
-}
-
-export interface MasterDetailItem {
-  caption?: string;
-  html?: string;
-  actions?: MasterDetailAction[];
-  [key: string]: any;
-}
+import {IbItem} from "../models/ib-item";
+import {IbAction} from "../models/ib-action";
 
 export class MasterDetailPanel {
 
@@ -20,19 +9,19 @@ export class MasterDetailPanel {
   caption: string;
 
   @bindable
-  items: MasterDetailItem[];
+  items: IbItem[];
 
   @bindable
   callback: Function;
 
-  selectedItem: MasterDetailItem;
+  selectedItem: IbItem;
 
-  select(item: MasterDetailItem) {
+  select(item: IbItem) {
     this.selectedItem = item;
     this.callback && this.callback({item});
   }
 
-  runAction(action: MasterDetailAction) {
+  runAction(action: IbAction) {
     action.callback && action.callback();
   }
 }

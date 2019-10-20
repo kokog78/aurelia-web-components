@@ -61,7 +61,7 @@
       <h2>Master-Detail Panel</h2>
       <input id="master-detail-result" value.bind="masterDetailResult">
       <master-detail-panel caption="Test"
-                           items.two-way="masterDetailItems"
+                           items.bind="masterDetailItems"
                            callback.call="selectDetail(item)">
         <div slot="header">
           <div if.bind="!masterDetailItem">
