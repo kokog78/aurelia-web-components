@@ -12,23 +12,23 @@ var VerticalTabsPanel = (function () {
     function VerticalTabsPanel() {
     }
     VerticalTabsPanel.prototype.attached = function () {
-        if (this.tabs && this.tabs.length) {
+        if (this.items && this.items.length) {
             var elements = this.getMainElements();
             var index = 0;
-            for (var _i = 0, _a = this.tabs; _i < _a.length; _i++) {
+            for (var _i = 0, _a = this.items; _i < _a.length; _i++) {
                 var item = _a[_i];
                 if (index < elements.length) {
                     item._displayValue = elements[index].style.display;
                 }
                 index++;
             }
-            this.openTab(this.tabs[0]);
+            this.openTab(this.items[0]);
         }
     };
     VerticalTabsPanel.prototype.openTab = function (tab) {
         var elements = this.getMainElements();
         var index = 0;
-        for (var _i = 0, _a = this.tabs; _i < _a.length; _i++) {
+        for (var _i = 0, _a = this.items; _i < _a.length; _i++) {
             var item = _a[_i];
             if (index < elements.length) {
                 if (item === tab) {
@@ -56,7 +56,7 @@ var VerticalTabsPanel = (function () {
     __decorate([
         bindable,
         __metadata("design:type", Array)
-    ], VerticalTabsPanel.prototype, "tabs", void 0);
+    ], VerticalTabsPanel.prototype, "items", void 0);
     __decorate([
         bindable,
         __metadata("design:type", Function)

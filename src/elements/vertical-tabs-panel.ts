@@ -4,7 +4,7 @@ import {Tab} from "../models/tab";
 export class VerticalTabsPanel {
 
   @bindable
-  tabs: Tab[];
+  items: Tab[];
 
   @bindable
   callback: Function;
@@ -12,23 +12,23 @@ export class VerticalTabsPanel {
   mainElement: Element;
 
   attached() {
-    if (this.tabs && this.tabs.length) {
+    if (this.items && this.items.length) {
       let elements = this.getMainElements();
       let index = 0;
-      for (let item of this.tabs) {
+      for (let item of this.items) {
         if (index < elements.length) {
           item._displayValue = elements[index].style.display;
         }
         index++;
       }
-      this.openTab(this.tabs[0]);
+      this.openTab(this.items[0]);
     }
   }
 
   openTab(tab: Tab) {
     let elements = this.getMainElements();
     let index = 0;
-    for (let item of this.tabs) {
+    for (let item of this.items) {
       if (index < elements.length) {
         if (item === tab) {
           elements[index].style.display = item._displayValue;
