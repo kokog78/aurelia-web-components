@@ -1,6 +1,6 @@
-import {IbItem} from "../src/models/ib-item";
+import {MasterDetailItem} from "../src/models/master-detail-item";
 
-interface Item extends IbItem {
+interface Item extends MasterDetailItem {
   data: number;
 }
 
