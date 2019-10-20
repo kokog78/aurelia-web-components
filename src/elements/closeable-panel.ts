@@ -1,4 +1,4 @@
-import {computedFrom, bindable} from 'aurelia-framework';
+import {bindable} from 'aurelia-framework';
 
 export class CloseablePanel {
 
