@@ -37,7 +37,7 @@ collapsible-panel {
             flex: 1 1 auto;
     display: none;
     margin-bottom: 5px;
-    margin-left: 16px; }
+    margin-left: calc(0.7rem + 5px); }
   collapsible-panel .ib-open .ib-collapsible-panel-caption::before {
     -webkit-transform: rotate(90deg) translateX(-3px);
             transform: rotate(90deg) translateX(-3px); }
