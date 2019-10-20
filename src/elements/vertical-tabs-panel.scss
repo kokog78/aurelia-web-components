@@ -1,0 +1,29 @@
+vertical-tabs-panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+
+  > .ib-vertical-tabs-panel-content {
+    place-self: stretch;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    height: inherit;
+
+    > .ib-vertical-tabs-items {
+      margin-top: 5px;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    > .ib-vertical-tabs-main {
+      margin-top: 5px;
+      display: flex;
+      padding: 10px;
+      overflow-y: auto;
+    }
+  }
+}

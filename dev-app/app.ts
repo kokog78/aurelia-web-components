@@ -1,4 +1,5 @@
 import {MasterDetailItem} from "../src/models/master-detail-item";
+import {Tab} from "../src/models/tab";
 
 interface Item extends MasterDetailItem {
   data: number;
@@ -11,15 +12,22 @@ export class App {
   panelResult: string;
   panelOpen: boolean = true;
   overlapOpen: boolean;
+
   masterDetailResult: string;
   masterDetailItem: Item;
   masterDetailItemName: string;
   masterDetailItems: Item[] = [];
 
+  verticalTabsResult: string;
+  tabs: Tab[] = [];
+
   attached() {
     this.addMasterDetailItem('1.json');
     this.addMasterDetailItem('2.json');
     this.addMasterDetailItem('3.json');
+    this.addTab('Tab 1', 'tab1');
+    this.addTab('Tab 2', 'tab2');
+    this.addTab('Tab 3', 'tab3');
   }
 
   collapsibleCallback(open: boolean, index: number) {
@@ -62,6 +70,18 @@ export class App {
       data: this.masterDetailItems.length * 10
     };
     this.masterDetailItems.push(item);
+  }
+
+  addTab(caption: string, id: string) {
+    let tab: Tab = {
+      caption: caption,
+      id: id
+    };
+    this.tabs.push(tab);
+  }
+
+  tabOpened(item: Tab) {
+    this.verticalTabsResult = item.caption;
   }
 
   private deleteMasterDetailItem(deletedItem: Item) {

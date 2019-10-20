@@ -1,0 +1,29 @@
+vertical-tabs-panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr; }
+  vertical-tabs-panel > .ib-vertical-tabs-panel-content {
+    place-self: stretch;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    height: inherit; }
+    vertical-tabs-panel > .ib-vertical-tabs-panel-content > .ib-vertical-tabs-items {
+      margin-top: 5px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      padding: 10px;
+      border-radius: 5px; }
+    vertical-tabs-panel > .ib-vertical-tabs-panel-content > .ib-vertical-tabs-main {
+      margin-top: 5px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 10px;
+      overflow-y: auto; }
