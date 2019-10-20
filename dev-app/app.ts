@@ -53,6 +53,7 @@ export class App {
       html: '<i>test test test</i>',
       actions: [
         {
+          title: 'Delete row',
           html: '<b>D</b>elete',
           className: 'red',
           callback: () => this.deleteMasterDetailItem(item)

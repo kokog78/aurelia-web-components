@@ -31,6 +31,7 @@
         </div>
         <div class="ib-master-detail-panel-actions">
           <button repeat.for="action of item.actions"
+                  title="${action.title}"
                   class.bind="action.className"
                   click.trigger="runAction(action)" innerhtml.bind="action.html || ''">
           </button>
