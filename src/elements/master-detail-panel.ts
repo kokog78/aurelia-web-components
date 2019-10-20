@@ -1,4 +1,3 @@
-import {computedFrom} from 'aurelia-framework';
 import {bindable} from "aurelia-templating";
 import {IbItem} from "../models/ib-item";
 import {IbAction} from "../models/ib-action";

@@ -1,5 +1,9 @@
 import {IbItem} from "../src/models/ib-item";
 
+interface Item extends IbItem {
+  data: number;
+}
+
 export class App {
 
   collapsibleResult: string;
@@ -8,9 +12,9 @@ export class App {
   panelOpen: boolean = true;
   overlapOpen: boolean;
   masterDetailResult: string;
-  masterDetailItem: IbItem;
+  masterDetailItem: Item;
   masterDetailItemName: string;
-  masterDetailItems: IbItem[] = [];
+  masterDetailItems: Item[] = [];
 
   attached() {
     this.addMasterDetailItem('1.json');
@@ -34,7 +38,7 @@ export class App {
     this.overlapOpen = true;
   }
 
-  selectDetail(item: IbItem) {
+  selectDetail(item: Item) {
     this.masterDetailItem = item;
     if (item) {
       this.masterDetailResult = `selected: ${item['data']}`;
@@ -44,7 +48,7 @@ export class App {
   }
 
   addMasterDetailItem(caption: string) {
-    let item: IbItem = {
+    let item: Item = {
       caption: caption,
       html: '<i>test test test</i>',
       actions: [
@@ -59,7 +63,7 @@ export class App {
     this.masterDetailItems.push(item);
   }
 
-  private deleteMasterDetailItem(deletedItem: IbItem) {
+  private deleteMasterDetailItem(deletedItem: Item) {
     this.masterDetailItems = this.masterDetailItems.filter(item => item != deletedItem);
   }
 }
