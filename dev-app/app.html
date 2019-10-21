@@ -5,6 +5,7 @@
   <require from="./elements/overlap-panel"></require>
   <require from="./elements/vertical-tabs-panel"></require>
   <require from="./elements/close-button"></require>
+  <require from="./elements/checkbox-panel"></require>
 
   <div class="app-cards">
 
@@ -106,7 +107,16 @@
       </vertical-tabs-panel>
     </div>
 
-  </div>
+    <div class="web-components-test-section">
+      <h2>Checkbox Panel</h2>
+      <input value.bind="checkboxResult" size="50">
+      <button click.trigger="addCheckbox()">Add</button>
+      <checkbox-panel values.two-way="checkboxValues"
+                      labels.two-way="checkboxLabels"
+                      callback.call="checkboxClicked(index)" columns="4">
+      </checkbox-panel>
+    </div>
 
+  </div>
 
 </template>

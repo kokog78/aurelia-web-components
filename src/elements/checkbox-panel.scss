@@ -1,0 +1,11 @@
+checkbox-panel {
+  display: flex;
+
+  > .ib-checkbox-panel-content {
+    flex: 1 1 auto;
+    display: grid;
+    grid-gap: 10px;
+    justify-items: end;
+    place-content: stretch;
+  }
+}

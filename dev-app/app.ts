@@ -21,13 +21,17 @@ export class App {
   verticalTabsResult: string;
   tabs: Tab[] = [];
 
+  checkboxResult: string;
+  checkboxValues: boolean[] = [false, true, false];
+  checkboxLabels: string[] = ['Label One', 'Label Two', 'Label Three'];
+
   attached() {
     this.addMasterDetailItem('1.json');
     this.addMasterDetailItem('2.json');
     this.addMasterDetailItem('3.json');
-    this.addTab('Tab 1', 'tab1');
-    this.addTab('Tab 2', 'tab2');
-    this.addTab('Tab 3', 'tab3');
+    this.addTab('Tab 1');
+    this.addTab('Tab 2');
+    this.addTab('Tab 3');
   }
 
   collapsibleCallback(open: boolean, index: number) {
@@ -72,16 +76,25 @@ export class App {
     this.masterDetailItems.push(item);
   }
 
-  addTab(caption: string, id: string) {
+  addTab(caption: string) {
     let tab: Tab = {
-      caption: caption,
-      id: id
+      caption: caption
     };
     this.tabs.push(tab);
   }
 
   tabOpened(item: Tab) {
     this.verticalTabsResult = item.caption;
+  }
+
+  checkboxClicked(index: number) {
+    this.checkboxResult = `clicked: ${index}, value: ${this.checkboxValues[index]}`;
+  }
+
+  addCheckbox() {
+    let size = this.checkboxValues.length;
+    this.checkboxValues.push(false);
+    this.checkboxLabels.push(`Value #${size}`);
   }
 
   private deleteMasterDetailItem(deletedItem: Item) {
