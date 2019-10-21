@@ -6,6 +6,7 @@
   <div class="ib-overlap-panel-content ib-panel-body-colors">
     <div class="ib-overlap-panel-main">
       <slot></slot>
+      <slot name="body"></slot>
     </div>
     <div class="ib-overlap-panel-overlay ib-panel-overlay-colors" if.bind="open"></div>
     <div class="ib-overlap-panel-dialog" class.bind="open ? 'ib-open' : 'ib-closed'">
