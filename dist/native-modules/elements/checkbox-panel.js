@@ -20,7 +20,6 @@ var CheckboxPanel = (function () {
         this.container.style.gridTemplateColumns = gtc;
     };
     CheckboxPanel.prototype.clickCheckbox = function (index) {
-        console.log(this.values);
         this.callback && this.callback({ index: index });
         return true;
     };

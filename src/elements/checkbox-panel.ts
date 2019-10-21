@@ -26,7 +26,6 @@ export class CheckboxPanel {
   }
 
   clickCheckbox(index: number) {
-    console.log(this.values);
     this.callback && this.callback({index});
     return true;
   }
