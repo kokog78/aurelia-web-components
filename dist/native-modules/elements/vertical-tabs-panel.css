@@ -20,6 +20,13 @@ vertical-tabs-panel {
               flex-direction: column;
       padding: 10px;
       border-radius: 5px; }
+      vertical-tabs-panel > .ib-vertical-tabs-panel-content > .ib-vertical-tabs-items > .ib-vertical-tabs-panel-link {
+        padding: 5px; }
+      vertical-tabs-panel > .ib-vertical-tabs-panel-content > .ib-vertical-tabs-items > .ib-vertical-tabs-panel-options {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
+        padding: 5px; }
     vertical-tabs-panel > .ib-vertical-tabs-panel-content > .ib-vertical-tabs-main {
       margin-top: 5px;
       display: -webkit-box;

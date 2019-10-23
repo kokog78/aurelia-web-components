@@ -9,6 +9,9 @@
 .ib-panel-tab-colors {
   color: white; }
 
+.ib-panel-tab-colors.active {
+  color: yellow; }
+
 .ib-panel-border-colors {
   border-color: #66bb6a; }
 

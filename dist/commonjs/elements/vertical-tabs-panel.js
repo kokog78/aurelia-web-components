@@ -35,9 +35,11 @@ var VerticalTabsPanel = (function () {
             if (index < elements.length) {
                 if (item === tab) {
                     elements[index].style.display = item._displayValue;
+                    item._active = true;
                 }
                 else {
                     elements[index].style.display = 'none';
+                    item._active = false;
                 }
             }
             index++;

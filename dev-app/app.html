@@ -86,6 +86,7 @@
       <h2>Vertical Tabs Panel</h2>
       <input id="vertical-tabs-result" value.bind="verticalTabsResult">
       <vertical-tabs-panel items.bind="tabs" callback.call="tabOpened(item)">
+        <span slot="options">This should be displayed</span>
         <div>
           <h4>Tab 1</h4>
           <p>

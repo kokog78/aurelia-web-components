@@ -17,6 +17,14 @@ vertical-tabs-panel {
       flex-direction: column;
       padding: 10px;
       border-radius: 5px;
+
+      > .ib-vertical-tabs-panel-link {
+        padding: 5px;
+      }
+      > .ib-vertical-tabs-panel-options {
+        flex: 1 1 auto;
+        padding: 5px;
+      }
     }
 
     > .ib-vertical-tabs-main {

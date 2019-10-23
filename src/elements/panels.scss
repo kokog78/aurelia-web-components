@@ -11,6 +11,9 @@
 .ib-panel-tab-colors {
   color: $panel-header-color;
 }
+.ib-panel-tab-colors.active {
+  color: $panel-header-selected-color;
+}
 .ib-panel-border-colors {
   border-color: $panel-border-color;
 }
