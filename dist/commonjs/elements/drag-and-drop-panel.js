@@ -42,10 +42,12 @@ var DragAndDropPanel = (function () {
         }
     };
     DragAndDropPanel.prototype.drop = function (event, dropId) {
+        var _this = this;
         if (dropId !== this.startId) {
             this.sortElements(dropId);
             var ids = this.calculateIds();
             this.callback && this.callback({ ids: ids });
+            setTimeout(function () { return _this.initialize(); }, 10);
         }
     };
     DragAndDropPanel.prototype.sortElements = function (dropId) {

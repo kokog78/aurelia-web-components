@@ -126,12 +126,12 @@
       <drag-and-drop-panel items.two-way="dragAndDropItems"
                            callback.call="dragAndDropFinished(ids)"
                            view-model.ref="dragAndDropModel">
-        <div class="draggable" repeat.for="item of dragAndDropItems" id="DaD-${item}">${item}</div>
+        <div class="DaD-item" repeat.for="item of dragAndDropItems" id="DaD-${item}">${item}</div>
       </drag-and-drop-panel>
       <drag-and-drop-panel vertical="true">
-        <div class="draggable" id="DaD-A">A</div>
-        <div class="draggable" id="DaD-B">B</div>
-        <div class="draggable" id="DaD-C">C</div>
+        <div class="DaD-item" id="DaD-A">A</div>
+        <div class="DaD-item" id="DaD-B">B</div>
+        <div class="DaD-item" id="DaD-C">C</div>
       </drag-and-drop-panel>
     </div>
 

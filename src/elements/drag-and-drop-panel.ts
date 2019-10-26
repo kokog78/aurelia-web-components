@@ -47,6 +47,7 @@ export class DragAndDropPanel implements initializableViewModel {
       this.sortElements(dropId);
       let ids: string[] = this.calculateIds();
       this.callback && this.callback({ids: ids});
+      setTimeout(() => this.initialize(), 10);
     }
   }
 
