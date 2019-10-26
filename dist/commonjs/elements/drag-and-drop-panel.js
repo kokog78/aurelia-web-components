@@ -14,7 +14,8 @@ var DragAndDropPanel = (function () {
     function DragAndDropPanel() {
     }
     DragAndDropPanel.prototype.attached = function () {
-        this.initialize();
+        var _this = this;
+        setTimeout(function () { return _this.initialize(); }, 0);
     };
     DragAndDropPanel.prototype.endDrag = function () {
         this.dragStarted = false;

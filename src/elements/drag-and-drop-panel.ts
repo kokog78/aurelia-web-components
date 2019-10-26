@@ -17,7 +17,7 @@ export class DragAndDropPanel implements initializableViewModel {
   startId: string;
 
   attached() {
-    this.initialize();
+    setTimeout(() => this.initialize(), 0);
   }
 
   endDrag() {
