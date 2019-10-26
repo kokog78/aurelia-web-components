@@ -4,14 +4,10 @@ drag-and-drop-panel {
   > .drag-and-drop-panel-content {
     flex: 1 1 auto;
     display: flex;
-
-    > .drop-target {
-      border: 1px solid transparent;
-    }
+    flex-wrap: wrap;
+  }
+  > .drag-and-drop-panel-content.vertical {
+    flex-direction: column;
   }
 
-  > .drag-started > .drop-target {
-    padding: 5px;
-    border: 1px dashed black;
-  }
 }

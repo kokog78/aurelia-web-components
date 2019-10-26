@@ -90,6 +90,10 @@ var DragAndDropPanel = (function () {
     ], DragAndDropPanel.prototype, "items", void 0);
     __decorate([
         aurelia_framework_1.bindable,
+        __metadata("design:type", Boolean)
+    ], DragAndDropPanel.prototype, "vertical", void 0);
+    __decorate([
+        aurelia_framework_1.bindable,
         __metadata("design:type", Function)
     ], DragAndDropPanel.prototype, "callback", void 0);
     return DragAndDropPanel;

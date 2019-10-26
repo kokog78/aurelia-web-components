@@ -7,6 +7,9 @@ export class DragAndDropPanel implements initializableViewModel {
   items: any[];
 
   @bindable
+  vertical: boolean;
+
+  @bindable
   callback: Function;
 
   rootElement: HTMLElement;

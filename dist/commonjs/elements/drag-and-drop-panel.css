@@ -8,9 +8,11 @@ drag-and-drop-panel {
             flex: 1 1 auto;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
-    drag-and-drop-panel > .drag-and-drop-panel-content > .drop-target {
-      border: 1px solid transparent; }
-  drag-and-drop-panel > .drag-started > .drop-target {
-    padding: 5px;
-    border: 1px dashed black; }
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  drag-and-drop-panel > .drag-and-drop-panel-content.vertical {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
