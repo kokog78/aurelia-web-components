@@ -9,6 +9,7 @@ export function configure(config: FrameworkConfiguration) {
     PLATFORM.moduleName('./elements/overlap-panel'),
     PLATFORM.moduleName('./elements/master-detail-panel'),
     PLATFORM.moduleName('./elements/vertical-tabs-panel'),
-    PLATFORM.moduleName('./elements/checkbox-panel')
+    PLATFORM.moduleName('./elements/checkbox-panel'),
+    PLATFORM.moduleName('./elements/drag-and-drop-panel')
   ]);
 }

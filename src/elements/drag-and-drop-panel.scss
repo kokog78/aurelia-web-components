@@ -1,0 +1,17 @@
+drag-and-drop-panel {
+  display: flex;
+
+  > .drag-and-drop-panel-content {
+    flex: 1 1 auto;
+    display: flex;
+
+    > .drop-target {
+      border: 1px solid transparent;
+    }
+  }
+
+  > .drag-started > .drop-target {
+    padding: 5px;
+    border: 1px dashed black;
+  }
+}

@@ -9,7 +9,8 @@ function configure(config) {
         aurelia_pal_1.PLATFORM.moduleName('./elements/overlap-panel'),
         aurelia_pal_1.PLATFORM.moduleName('./elements/master-detail-panel'),
         aurelia_pal_1.PLATFORM.moduleName('./elements/vertical-tabs-panel'),
-        aurelia_pal_1.PLATFORM.moduleName('./elements/checkbox-panel')
+        aurelia_pal_1.PLATFORM.moduleName('./elements/checkbox-panel'),
+        aurelia_pal_1.PLATFORM.moduleName('./elements/drag-and-drop-panel')
     ]);
 }
 exports.configure = configure;

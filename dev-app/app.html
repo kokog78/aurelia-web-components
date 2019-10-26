@@ -6,6 +6,7 @@
   <require from="./elements/vertical-tabs-panel"></require>
   <require from="./elements/close-button"></require>
   <require from="./elements/checkbox-panel"></require>
+  <require from="./elements/drag-and-drop-panel"></require>
 
   <div class="app-cards">
 
@@ -116,6 +117,17 @@
                       labels.two-way="checkboxLabels"
                       callback.call="checkboxClicked(index)" columns="4">
       </checkbox-panel>
+    </div>
+
+    <div class="web-components-test-section">
+      <h2>Drag & Drop Panel</h2>
+      <input value.bind="dragAndDropResult" size="60">
+      <button click.trigger="addDragAndDrop()">Add</button>
+      <drag-and-drop-panel items.two-way="dragAndDropItems"
+                           callback.call="dragAndDropFinished(ids)"
+                           view-model.ref="dragAndDropModel">
+        <div class="draggable" repeat.for="item of dragAndDropItems" id="drag-and-drop-${item}">${item}</div>
+      </drag-and-drop-panel>
     </div>
 
   </div>

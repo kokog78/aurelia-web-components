@@ -1,5 +1,6 @@
 import {MasterDetailItem} from "../src/models/master-detail-item";
 import {Tab} from "../src/models/tab";
+import {DragAndDropPanel} from "../src/elements/drag-and-drop-panel";
 
 interface Item extends MasterDetailItem {
   data: number;
@@ -24,6 +25,10 @@ export class App {
   checkboxResult: string;
   checkboxValues: boolean[] = [false, true, false];
   checkboxLabels: string[] = ['Label One', 'Label Two', 'Label Three'];
+
+  dragAndDropResult: string;
+  dragAndDropItems: string[] = ['One', 'Two', 'Three'];
+  dragAndDropModel: DragAndDropPanel;
 
   attached() {
     this.addMasterDetailItem('1.json');
@@ -95,6 +100,15 @@ export class App {
     let size = this.checkboxValues.length;
     this.checkboxValues.push(false);
     this.checkboxLabels.push(`Value #${size}`);
+  }
+
+  addDragAndDrop() {
+    this.dragAndDropItems.push(`${this.dragAndDropItems.length + 1}`);
+    setTimeout(() => this.dragAndDropModel.initialize(), 0);
+  }
+
+  dragAndDropFinished(ids: string[]) {
+    this.dragAndDropResult = ids.join(', ');
   }
 
   private deleteMasterDetailItem(deletedItem: Item) {

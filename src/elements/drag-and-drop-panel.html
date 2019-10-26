@@ -1,0 +1,8 @@
+<template>
+  <require from="./drag-and-drop-panel.css"></require>
+  <div ref="rootElement" class="drag-and-drop-panel-content"
+       class.bind="dragStarted ? 'drag-started' : ''" dragend.trigger="endDrag()">
+    <slot></slot>
+    <slot name="body"></slot>
+  </div>
+</template>

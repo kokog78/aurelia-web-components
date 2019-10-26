@@ -1,0 +1,16 @@
+drag-and-drop-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  drag-and-drop-panel > .drag-and-drop-panel-content {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    drag-and-drop-panel > .drag-and-drop-panel-content > .drop-target {
+      border: 1px solid transparent; }
+  drag-and-drop-panel > .drag-started > .drop-target {
+    padding: 5px;
+    border: 1px dashed black; }
