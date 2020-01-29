@@ -27,7 +27,7 @@ export class App {
   checkboxLabels: string[] = ['Label One', 'Label Two', 'Label Three'];
 
   dragAndDropResult: string;
-  dragAndDropItems: string[] = ['One', 'Two', 'Three'];
+  dragAndDropItems: string[] = ['One', 'Two', 'Three', 'Four', 'Five'];
   dragAndDropModel: DragAndDropPanel;
 
   attached() {

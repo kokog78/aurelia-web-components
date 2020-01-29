@@ -5,6 +5,10 @@ drag-and-drop-panel {
     flex: 1 1 auto;
     display: flex;
     flex-wrap: wrap;
+
+    > .drag-and-drop-cont {
+      cursor: move;
+    }
   }
   > .drag-and-drop-panel-content.vertical {
     flex-direction: column;
