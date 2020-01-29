@@ -124,7 +124,8 @@
       <h2>Checkbox List</h2>
       <input value.bind="checkboxListResult" size="50">
       <button click.trigger="addCheckboxToList()">Add</button>
-      <checkbox-list values.two-way="checkboxListValues"
+      <checkbox-list style="height: 200px;"
+                     values.two-way="checkboxListValues"
                      labels.two-way="checkboxListLabels"
                      callback.call="checkboxListClicked(index)">
       </checkbox-list>
