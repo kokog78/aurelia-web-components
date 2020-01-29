@@ -6,6 +6,7 @@
   <require from="./elements/vertical-tabs-panel"></require>
   <require from="./elements/close-button"></require>
   <require from="./elements/checkbox-panel"></require>
+  <require from="./elements/checkbox-list"></require>
   <require from="./elements/drag-and-drop-panel"></require>
 
   <div class="app-cards">
@@ -117,6 +118,16 @@
                       labels.two-way="checkboxLabels"
                       callback.call="checkboxClicked(index)" columns="4">
       </checkbox-panel>
+    </div>
+
+    <div class="web-components-test-section">
+      <h2>Checkbox List</h2>
+      <input value.bind="checkboxListResult" size="50">
+      <button click.trigger="addCheckboxToList()">Add</button>
+      <checkbox-list values.two-way="checkboxListValues"
+                     labels.two-way="checkboxListLabels"
+                     callback.call="checkboxListClicked(index)">
+      </checkbox-list>
     </div>
 
     <div class="web-components-test-section">

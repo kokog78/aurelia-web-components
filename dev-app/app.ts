@@ -26,6 +26,10 @@ export class App {
   checkboxValues: boolean[] = [false, true, false];
   checkboxLabels: string[] = ['Label One', 'Label Two', 'Label Three'];
 
+  checkboxListResult: string;
+  checkboxListValues: boolean[] = [false, true];
+  checkboxListLabels: string[] = ['Label One', 'Label Two', 'Label Three'];
+
   dragAndDropResult: string;
   dragAndDropItems: string[] = ['One', 'Two', 'Three', 'Four', 'Five'];
   dragAndDropModel: DragAndDropPanel;
@@ -100,6 +104,16 @@ export class App {
     let size = this.checkboxValues.length;
     this.checkboxValues.push(false);
     this.checkboxLabels.push(`Value #${size}`);
+  }
+
+  checkboxListClicked(index: number) {
+    this.checkboxListResult = `clicked: ${index}, value: ${this.checkboxListValues[index]}`;
+  }
+
+  addCheckboxToList() {
+    let size = this.checkboxListValues.length;
+    this.checkboxListValues.push(false);
+    this.checkboxListLabels.push(`Value #${size}`);
   }
 
   addDragAndDrop() {
