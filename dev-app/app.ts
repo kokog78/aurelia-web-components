@@ -27,8 +27,20 @@ export class App {
   checkboxLabels: string[] = ['Label One', 'Label Two', 'Label Three'];
 
   checkboxListResult: string;
-  checkboxListValues: boolean[] = [false, true];
-  checkboxListLabels: string[] = ['Label One', 'Label Two', 'Label Three'];
+  checkboxListItems: any[] = [
+    {
+      label: 'Label One'
+    },
+    {
+      label: 'Label Two'
+    },
+    {
+      label: 'Label Three'
+    }
+  ];
+  checkboxListSelectedItems: any[] = [];
+  checkboxListStrings: string[] = ['Label1', 'Label2', 'Label3'];
+  checkboxListSelectedStrings: string[] = [];
 
   dragAndDropResult: string;
   dragAndDropItems: string[] = ['One', 'Two', 'Three', 'Four', 'Five'];
@@ -107,13 +119,18 @@ export class App {
   }
 
   checkboxListClicked(index: number) {
-    this.checkboxListResult = `clicked: ${index}, value: ${this.checkboxListValues[index]}`;
+    let content1: string = this.checkboxListSelectedItems
+      .map(i => i.label)
+      .join(', ');
+    let content2: string = this.checkboxListSelectedStrings.join(', ');
+    this.checkboxListResult = `clicked: ${index}, selected: ${content1}, ${content2}`;
   }
 
   addCheckboxToList() {
-    let size = this.checkboxListValues.length;
-    this.checkboxListValues.push(false);
-    this.checkboxListLabels.push(`Value #${size}`);
+    this.checkboxListItems.push({
+      label: `Label #${this.checkboxListItems.length}`
+    });
+    this.checkboxListStrings.push(`Label #${this.checkboxListStrings.length}`);
   }
 
   addDragAndDrop() {

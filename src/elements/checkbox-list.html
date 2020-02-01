@@ -1,7 +1,7 @@
 <template>
   <require from="./checkbox-list.css"></require>
-  <label repeat.for="label of labels">
-    <input type="checkbox" checked.bind="values[$index]" change.delegate="clickCheckbox($index)">
-    ${label}
+  <label repeat.for="value of values">
+    <input type="checkbox" checked.bind="selection($index).selected" change.delegate="clickCheckbox($index)">
+    ${label(value)}
   </label>
 </template>
