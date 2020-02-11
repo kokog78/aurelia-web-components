@@ -18,6 +18,9 @@ export class VerticalTabsPanel {
       for (let item of this.items) {
         if (index < elements.length) {
           item._displayValue = elements[index].style.display;
+          if (item._displayValue == 'none') {
+            item._displayValue = '';
+          }
         }
         index++;
       }
