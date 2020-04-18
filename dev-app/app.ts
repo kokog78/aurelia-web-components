@@ -49,7 +49,8 @@ export class App {
 
   treeNodes: TreeModel[] = [
     {
-      title: 'Node #1'
+      title: 'Node #1',
+      tooltip: "Tooltip #1"
     },
     {
       title: 'Node #2',
@@ -62,7 +63,8 @@ export class App {
               parent: true
             },
             {
-              title: "Node #5"
+              title: "Node #5",
+              tooltip: "Tooltip #5"
             }
           ]
         }

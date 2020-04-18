@@ -2,7 +2,7 @@ export interface TreeModel {
   open?: boolean;
   selected?: boolean;
   title?: string;
-  titleKey?: string;
+  tooltip?: string;
   parent?: boolean;
   children?: TreeModel[];
 }
