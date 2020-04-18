@@ -1,0 +1,25 @@
+<template>
+  <div class="ib-node-header ${node.open ? 'ib-open' : ''} ${selectable && !node.selected ? 'ib-unselected' : ''}">
+    <span class="ib-node-handler"
+          if.bind="node.children && node.children.length"
+          click.trigger="reverse()"
+          css="margin-left: ${padding}px"></span>
+    <span class="ib-node-dummy-handler"
+          if.bind="!node.children || !node.children.length"
+          css="margin-left: ${padding}px"></span>
+    <input if.bind="selectable" type="checkbox" class="ib-node-selector" checked.bind="node.selected">
+    <a href="" class="ib-node-title ${!clickable ? 'ib-nonclickable' : ''}" click.trigger="clickLabel()">
+      <span if.bind="node.titleKey" t="${node.titleKey}"></span>
+      <span if.bind="!node.titleKey">${node.title}</span>
+    </a>
+  </div>
+  <div class="ib-node-children" if.bind="node.open && node.children">
+    <tree-node repeat.for="node of node.children"
+               node.two-way="node"
+               selectable.bind="selectable"
+               clickable.bind="clickable"
+               level.bind="childLevel"
+               handler.bind="handler">
+    </tree-node>
+  </div>
+</template>

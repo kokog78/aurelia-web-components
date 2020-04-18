@@ -11,6 +11,8 @@ export function configure(config: FrameworkConfiguration) {
     PLATFORM.moduleName('./elements/vertical-tabs-panel'),
     PLATFORM.moduleName('./elements/checkbox-panel'),
     PLATFORM.moduleName('./elements/checkbox-list'),
-    PLATFORM.moduleName('./elements/drag-and-drop-panel')
+    PLATFORM.moduleName('./elements/drag-and-drop-panel'),
+    PLATFORM.moduleName('./elements/tree-node'),
+    PLATFORM.moduleName('./elements/tree-panel')
   ]);
 }

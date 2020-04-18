@@ -1,6 +1,7 @@
 import {MasterDetailItem} from "../src/models/master-detail-item";
 import {Tab} from "../src/models/tab";
 import {DragAndDropPanel} from "../src/elements/drag-and-drop-panel";
+import {TreeModel} from "../src/models/tree";
 
 interface Item extends MasterDetailItem {
   data: number;
@@ -45,6 +46,26 @@ export class App {
   dragAndDropResult: string;
   dragAndDropItems: string[] = ['One', 'Two', 'Three', 'Four', 'Five'];
   dragAndDropModel: DragAndDropPanel;
+
+  treeNodes: TreeModel[] = [
+    {
+      title: 'Node #1'
+    },
+    {
+      title: 'Node #2',
+      children: [
+        {
+          title: "Node #3",
+          children: [
+            {
+              title: "Node #4"
+            }
+          ]
+        }
+      ]
+    }
+
+  ];
 
   attached() {
     this.addMasterDetailItem('1.json');
@@ -140,6 +161,10 @@ export class App {
 
   dragAndDropFinished(ids: string[]) {
     this.dragAndDropResult = ids.join(', ');
+  }
+
+  selectTreeNode(node: TreeModel) {
+    alert(node.title);
   }
 
   private deleteMasterDetailItem(deletedItem: Item) {

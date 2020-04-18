@@ -1,0 +1,11 @@
+<template>
+  <require from="./tree-node"></require>
+  <require from="./tree-panel.css"></require>
+
+  <tree-node repeat.for="node of nodes"
+             node.two-way="node"
+             selectable.bind="selectable"
+             clickable.bind="clickable"
+             handler.bind="handler">
+  </tree-node>
+</template>

@@ -8,6 +8,7 @@
   <require from="./elements/checkbox-panel"></require>
   <require from="./elements/checkbox-list"></require>
   <require from="./elements/drag-and-drop-panel"></require>
+  <require from="./elements/tree-panel"></require>
 
   <div class="app-cards">
 
@@ -151,6 +152,23 @@
         <div class="DaD-item" id="DaD-B">B</div>
         <div class="DaD-item" id="DaD-C">C</div>
       </drag-and-drop-panel>
+    </div>
+
+    <div class="web-components-test-section">
+      <h2>Tree Panel</h2>
+      <tree-panel nodes.two-way="treeNodes">
+
+      </tree-panel>
+    </div>
+
+    <div class="web-components-test-section">
+      <h2>Selectable Tree Panel</h2>
+      <tree-panel nodes.two-way="treeNodes" selectable.bind="true"></tree-panel>
+    </div>
+
+    <div class="web-components-test-section">
+      <h2>Clickable Tree Panel</h2>
+      <tree-panel nodes.two-way="treeNodes" selectable.bind="true" node-clicked.call="selectTreeNode(node)"></tree-panel>
     </div>
 
   </div>

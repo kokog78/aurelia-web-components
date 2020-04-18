@@ -1,0 +1,4 @@
+{
+  "name": "panel",
+  "description": "Creates a panel class, an HTML template and an SCSS stylesheet and places it in the project elements folder."
+}
