@@ -58,14 +58,19 @@ export class App {
           title: "Node #3",
           children: [
             {
-              title: "Node #4"
+              title: "Node #4",
+              parent: true
+            },
+            {
+              title: "Node #5"
             }
           ]
         }
       ]
     }
-
   ];
+
+  treeResult: string;
 
   attached() {
     this.addMasterDetailItem('1.json');
@@ -163,8 +168,24 @@ export class App {
     this.dragAndDropResult = ids.join(', ');
   }
 
+  clickTreeNode(node: TreeModel) {
+    this.treeResult = 'clicked: ' + node.title;
+  }
+
+  openTreeNode(node: TreeModel) {
+    if (node.open) {
+      this.treeResult = 'opened: ' + node.title;
+    } else {
+      this.treeResult = 'closed: ' + node.title;
+    }
+  }
+
   selectTreeNode(node: TreeModel) {
-    alert(node.title);
+    if (node.selected) {
+      this.treeResult = 'selected: ' + node.title;
+    } else {
+      this.treeResult = 'unselected: ' + node.title;
+    }
   }
 
   private deleteMasterDetailItem(deletedItem: Item) {

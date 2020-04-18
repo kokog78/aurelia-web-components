@@ -23,6 +23,9 @@ export class TreeNode {
   childLevel: number;
 
   bind() {
+    if (this.node.children && this.node.children.length) {
+      this.node.parent = true;
+    }
     this.level = this.level || 0;
     this.childLevel = this.level + 1;
     this.padding = this.level * 17;
@@ -30,6 +33,11 @@ export class TreeNode {
 
   reverse() {
     this.node.open = !this.node.open;
+    this.handler.nodeOpened(this.node);
+  }
+
+  select() {
+    setTimeout(() => this.handler.nodeSelected(this.node), 100);
   }
 
   clickLabel() {
@@ -37,6 +45,7 @@ export class TreeNode {
     if (!edited) {
       if (this.selectable) {
         this.node.selected = !this.node.selected;
+        this.handler.nodeSelected(this.node);
       } else {
         this.reverse();
       }

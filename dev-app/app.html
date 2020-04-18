@@ -168,7 +168,11 @@
 
     <div class="web-components-test-section">
       <h2>Clickable Tree Panel</h2>
-      <tree-panel nodes.two-way="treeNodes" selectable.bind="true" node-clicked.call="selectTreeNode(node)"></tree-panel>
+      <input value.bind="treeResult" size="60">
+      <tree-panel nodes.two-way="treeNodes" selectable.bind="true"
+                  node-clicked.call="clickTreeNode(node)"
+                  node-opened.call="openTreeNode(node)"
+                  node-selected.call="selectTreeNode(node)"></tree-panel>
     </div>
 
   </div>

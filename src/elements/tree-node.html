@@ -1,13 +1,17 @@
 <template>
   <div class="ib-node-header ${node.open ? 'ib-open' : ''} ${selectable && !node.selected ? 'ib-unselected' : ''} ${!clickable ? 'ib-nonclickable' : ''}">
     <span class="ib-node-handler"
-          if.bind="node.children && node.children.length"
+          if.bind="node.parent"
           click.trigger="reverse()"
           css="margin-left: ${padding}px"></span>
     <span class="ib-node-dummy-handler"
-          if.bind="!node.children || !node.children.length"
+          if.bind="!node.parent"
           css="margin-left: ${padding}px"></span>
-    <input if.bind="selectable" type="checkbox" class="ib-node-selector" checked.bind="node.selected">
+    <input if.bind="selectable"
+           type="checkbox"
+           class="ib-node-selector"
+           checked.bind="node.selected"
+           change.trigger="select()">
     <a href="" class="ib-node-title" click.trigger="clickLabel()">
       <span if.bind="node.titleKey" t="${node.titleKey}"></span>
       <span if.bind="!node.titleKey">${node.title}</span>
