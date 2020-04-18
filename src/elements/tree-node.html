@@ -1,5 +1,5 @@
 <template>
-  <div class="ib-node-header ${node.open ? 'ib-open' : ''} ${selectable && !node.selected ? 'ib-unselected' : ''}">
+  <div class="ib-node-header ${node.open ? 'ib-open' : ''} ${selectable && !node.selected ? 'ib-unselected' : ''} ${!clickable ? 'ib-nonclickable' : ''}">
     <span class="ib-node-handler"
           if.bind="node.children && node.children.length"
           click.trigger="reverse()"
@@ -8,7 +8,7 @@
           if.bind="!node.children || !node.children.length"
           css="margin-left: ${padding}px"></span>
     <input if.bind="selectable" type="checkbox" class="ib-node-selector" checked.bind="node.selected">
-    <a href="" class="ib-node-title ${!clickable ? 'ib-nonclickable' : ''}" click.trigger="clickLabel()">
+    <a href="" class="ib-node-title" click.trigger="clickLabel()">
       <span if.bind="node.titleKey" t="${node.titleKey}"></span>
       <span if.bind="!node.titleKey">${node.title}</span>
     </a>

@@ -35,10 +35,6 @@ tree-node {
     .ib-node-title {
       flex: 1 1 auto;
     }
-    .ib-node-title.ib-nonclickable {
-      text-decoration: none;
-      color: inherit;
-    }
   }
   .ib-open {
     .ib-node-handler::before {
@@ -46,8 +42,14 @@ tree-node {
     }
   }
   .ib-unselected {
-    .ib-node-title {
+    .ib-node-title > * {
       color: #888888;
+    }
+  }
+  .ib-nonclickable {
+    .ib-node-title {
+      text-decoration: none;
+      color: inherit;
     }
   }
 }
