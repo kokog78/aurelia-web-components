@@ -32,8 +32,12 @@ tree-node {
       flex: 0 0 auto;
     }
 
-    .ib-node-title {
+    .ib-node-content {
       flex: 1 1 auto;
+
+      .ib-node-subtitle {
+        margin-left: 10px;
+      }
     }
   }
   .ib-open {
@@ -42,12 +46,12 @@ tree-node {
     }
   }
   .ib-unselected {
-    .ib-node-title > * {
+    .ib-node-content > * {
       color: #888888;
     }
   }
   .ib-nonclickable {
-    .ib-node-title {
+    .ib-node-content {
       text-decoration: none;
       color: inherit;
     }

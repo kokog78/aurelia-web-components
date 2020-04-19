@@ -50,6 +50,7 @@ export class App {
   treeNodes: TreeModel[] = [
     {
       title: 'Node #1',
+      subtitle: "a subtitle",
       tooltip: "Tooltip #1"
     },
     {
@@ -57,6 +58,7 @@ export class App {
       children: [
         {
           title: "Node #3",
+          subtitle: "something",
           children: [
             {
               title: "Node #4",

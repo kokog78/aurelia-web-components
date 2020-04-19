@@ -12,8 +12,9 @@
            class="ib-node-selector"
            checked.bind="node.selected"
            change.trigger="select()">
-    <a href="" class="ib-node-title" title="${node.tooltip}" click.trigger="clickLabel()">
-      <span>${node.title}</span>
+    <a href="" class="ib-node-content" title="${node.tooltip}" click.trigger="clickLabel()">
+      <span class="ib-node-title">${node.title}</span>
+      <span class="ib-node-subtitle">${node.subtitle}</span>
     </a>
   </div>
   <div class="ib-node-children" if.bind="node.open && node.children">
