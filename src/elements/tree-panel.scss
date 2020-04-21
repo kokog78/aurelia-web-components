@@ -40,6 +40,9 @@ tree-node {
       }
     }
   }
+  .ib-tree-node-header.clicked {
+    background-color: lightyellow;
+  }
   .ib-open {
     .ib-tree-node-handler::before {
       transform: rotate(90deg) translateX(-3px);

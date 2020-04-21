@@ -21,12 +21,18 @@ export class TreePanel {
 
   handler: TreeNodeHandler;
   clickable: boolean;
+  clickedNode: TreeModel;
 
   bind() {
     this.clickable = !!this.nodeClicked;
     this.handler = {
       nodeClicked: (node: TreeModel) => {
         if (this.nodeClicked) {
+          if (this.clickedNode) {
+            this.clickedNode.clicked = false;
+          }
+          this.clickedNode = node;
+          node.clicked = true;
           this.nodeClicked({node: node});
           return true;
         }

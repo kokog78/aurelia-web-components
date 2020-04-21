@@ -1,6 +1,7 @@
 export interface TreeModel {
   open?: boolean;
   selected?: boolean;
+  clicked?: boolean;
   title?: string;
   subtitle?: string;
   tooltip?: string;

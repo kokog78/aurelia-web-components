@@ -1,5 +1,5 @@
 <template>
-  <div class="ib-tree-node-header ${node.open ? 'ib-open' : ''} ${selectable && !node.selected ? 'ib-unselected' : ''} ${!clickable ? 'ib-nonclickable' : ''}">
+  <div class="ib-tree-node-header ${node.open ? 'ib-open' : ''} ${selectable && !node.selected ? 'ib-unselected' : ''} ${node.clicked ? 'clicked' : ''} ${!clickable ? 'ib-nonclickable' : ''}">
     <span class="ib-tree-node-handler"
           if.bind="node.parent"
           click.trigger="reverse()"
