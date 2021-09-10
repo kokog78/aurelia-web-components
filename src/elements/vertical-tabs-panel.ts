@@ -28,7 +28,7 @@ export class VerticalTabsPanel {
     }
   }
 
-  openTab(tab: Tab) {
+  openTab(tab: Tab): boolean {
     let elements = this.getMainElements();
     let index = 0;
     for (let item of this.items) {
@@ -44,6 +44,7 @@ export class VerticalTabsPanel {
       index++;
     }
     this.callback && this.callback({item: tab});
+    return false;
   }
 
   private getMainElements(): HTMLElement[] {
