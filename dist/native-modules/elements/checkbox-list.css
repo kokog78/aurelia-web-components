@@ -1,0 +1,6 @@
+checkbox-list {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 1fr;
+  -ms-flex-line-pack: start;
+      align-content: start; }
