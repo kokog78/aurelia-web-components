@@ -6,7 +6,8 @@
          class="ib-panel-tab-colors ib-vertical-tabs-panel-link"
          class.bind="tab._active ? 'active' : ''"
          href=""
-         click.trigger="openTab(tab)">
+         click.trigger="openTab(tab)"
+         show.bind="!tab._hidden">
         ${tab.caption}
       </a>
       <div class="ib-vertical-tabs-panel-options">

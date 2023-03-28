@@ -76,12 +76,12 @@ export class App {
 
   treeResult: string;
 
-  attached() {
+  constructor() {
     this.addMasterDetailItem('1.json');
     this.addMasterDetailItem('2.json');
     this.addMasterDetailItem('3.json');
     this.addTab('Tab 1');
-    this.addTab('Tab 2');
+    this.addTab('Tab 2', true);
     this.addTab('Tab 3');
   }
 
@@ -127,9 +127,10 @@ export class App {
     this.masterDetailItems.push(item);
   }
 
-  addTab(caption: string) {
+  addTab(caption: string, hidden?: boolean) {
     let tab: Tab = {
-      caption: caption
+      caption: caption,
+      _hidden: hidden
     };
     this.tabs.push(tab);
   }

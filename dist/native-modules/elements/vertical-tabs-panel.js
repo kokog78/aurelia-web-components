@@ -19,6 +19,9 @@ var VerticalTabsPanel = (function () {
                 var item = _a[_i];
                 if (index < elements.length) {
                     item._displayValue = elements[index].style.display;
+                    if (item._displayValue == 'none') {
+                        item._displayValue = '';
+                    }
                 }
                 index++;
             }
@@ -43,6 +46,7 @@ var VerticalTabsPanel = (function () {
             index++;
         }
         this.callback && this.callback({ item: tab });
+        return false;
     };
     VerticalTabsPanel.prototype.getMainElements = function () {
         var result = [];

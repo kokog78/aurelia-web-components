@@ -9,7 +9,7 @@ closeable-panel {
     display: grid;
     grid-template-columns: auto 20px;
     grid-template-rows: 20px 1fr;
-    grid-template-areas: "header close" "body body";
+    grid-template-areas: "header close" "body body";
     grid-gap: 10px 5px;
     place-content: stretch stretch;
     margin-top: 5px;

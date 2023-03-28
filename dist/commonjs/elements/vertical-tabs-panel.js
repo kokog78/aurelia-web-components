@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.VerticalTabsPanel = void 0;
 var aurelia_framework_1 = require("aurelia-framework");
 var VerticalTabsPanel = (function () {
     function VerticalTabsPanel() {
@@ -21,6 +22,9 @@ var VerticalTabsPanel = (function () {
                 var item = _a[_i];
                 if (index < elements.length) {
                     item._displayValue = elements[index].style.display;
+                    if (item._displayValue == 'none') {
+                        item._displayValue = '';
+                    }
                 }
                 index++;
             }
@@ -45,6 +49,7 @@ var VerticalTabsPanel = (function () {
             index++;
         }
         this.callback && this.callback({ item: tab });
+        return false;
     };
     VerticalTabsPanel.prototype.getMainElements = function () {
         var result = [];

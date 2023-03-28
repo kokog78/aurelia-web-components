@@ -11,6 +11,8 @@ drag-and-drop-panel {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
+    drag-and-drop-panel > .drag-and-drop-panel-content > .drag-and-drop-cont {
+      cursor: move; }
   drag-and-drop-panel > .drag-and-drop-panel-content.vertical {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
